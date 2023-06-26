@@ -26,6 +26,59 @@ a {
 }
 
 header {
+  position: relative;
+}
+
+@media (min-width: 375px) {
+  .nav-socials,
+  .navbar-logo,
+  .navbar-menus,
+  .navbar-mobile-close {
+    display: none;
+  }
+
+  .navbar-mobile-open {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/mobile_intro_bg.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 2rem;
+  }
+
+  .home h2 {
+    color: var(--color-secondary);
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .home h1 {
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: 900;
+    font-size: 2rem;
+    background: url(./images/orange.jpeg) no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+  }
+
+  .home .home-details {
+    background: #f7f7f7;
+    padding: 1.5rem 0;
+    border: 3px solid white;
+    margin-top: 1 rw;
+  }
+}
+/* 
+header {
   background-color: white;
   position: sticky;
   align-items: flex-start;
@@ -89,6 +142,47 @@ nav {
   border: 4px solid;
 }
 
+.navbar-mobile-open,
+.navbar-mobile-close {
+  display: none;
+}
+
+.home {
+  background: url(./images/main_big.png) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12rem;
+  gap: 2rem;
+}
+
+.home h2 {
+
+}
+
+.home h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  background: url(./images/orange.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  width: 51%;
+}
+
+.home .home-details {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  border: 3px solid white;
+  width: 50%;
+  margin-top: 1rem;
+}
+
 @media (max-width: 768px) {
   .nav-socials {
     padding: 1rem;
@@ -98,8 +192,38 @@ nav {
     padding: 1rem;
   }
 
-  .navbar-menus {
+  .navbar-menus,
+  .nav-socials {
     display: none;
   }
 
+  .home h2 {
+    color: var(--color-secondary);
+    font-size: 2rem;
+  }
+  
+  .home h1 {
+    font-size: 2.5rem;
+  }
 }
+
+@media (max-width: 768px) {
+  .home {
+    padding-left: 4rem;
+    gap: 1rem;
+  }
+
+  .home h2 {
+    font-size: 2rem;
+    margin-top: -6rem;
+  }
+
+  .home h1 {
+    font-size: 3rem;
+    width: 75%;
+  }
+
+  .home .home-details {
+    width: 75%;
+  }
+} */
