@@ -127,8 +127,8 @@ header {
   .home h1 {
     text-transform: uppercase;
     color: transparent;
-     font-weight: 900;
-    font-size: 2rem;
+    font-weight: 900;
+    font-size: 3rem;
     background: url(./images/orange.jpeg) no-repeat;
     background-size: cover;
     -webkit-background-clip: text;
@@ -185,7 +185,7 @@ header {
     background: var(--color-secondary);
     bottom: -25%;
     left: 50%;
-    transform: translate(-60%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   .program-cards {
