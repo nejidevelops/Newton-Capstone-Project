@@ -1,0 +1,60 @@
+@media (min-width: 375px) {
+  .about-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url(./images/mobile_intro_bg.png) no-repeat;
+    background-size: cover;
+    padding: 0 2rem;
+  }
+  
+  .about-home h2 {
+    color: var(--color-secondary);
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .about-home h1 {
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: 900;
+    font-size: 3rem;
+    background: url(./images/orange.jpeg) no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+  }
+
+  .about-home .about-home-details {
+    background: #f7f7f7;
+    padding: 1.5rem 0;
+    border: 3px solid white;
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-home {
+    background: url(./images/main_big.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .about-home .about-home-details {
+    background: #f7f7f7;
+    padding: 1.5rem 0;
+    border: 3px solid white;
+    margin: 1rem 12rem;
+  }
+
+  .about-home .date-time {
+    margin-top: 5rem;
+    display: grid;
+    gap: 1rem;
+  }
+}
