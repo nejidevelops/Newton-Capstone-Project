@@ -158,68 +158,69 @@ header {
     font-weight: 400;
   }
 }
+
+@media (min-width: 768px) {
+  header {
+    background-color: white;
+    position: sticky;
+    align-items: flex-start;
+    box-shadow: 2px 2px 10px var(--color-alternate);
+  }
+
+  .nav-socials {
+    background: var(--color-primary);
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    padding: 1rem 12rem;
+  }
+  
+  .nav-socials img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+  
+  .nav-socials a {
+    color: var(--color-alternate);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    padding: 1rem 12rem;
+  }
+  
+  .navbar-logo label {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  .navbar-menus {
+    display: flex;
+    align-items: baseline;
+    gap: 4rem;
+  }
+  
+  .navbar-menus ul {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar-menus ul li a {
+    color: black;
+  }
+  
+  .navbar-mobile-open,
+  .navbar-mobile-close {
+    display: none;
+  }
+}
+
 /* 
-header {
-  background-color: white;
-  position: sticky;
-  align-items: flex-start;
-  box-shadow: 2px 2px 10px var(--color-alternate);
-}
 
-nav {
-  position: relative;
-}
-
-.nav-socials {
-  background: var(--color-primary);
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-end;
-  padding: 1rem 12rem;
-}
-
-.nav-socials img {
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-}
-
-.nav-socials a {
-  color: var(--color-alternate);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 1rem 12rem;
-}
-
-.navbar-logo label {
-  color: var(--color-primary);
-  text-transform: uppercase;
-  font-weight: 900;
-}
-
-.navbar-menus {
-  display: flex;
-  align-items: baseline;
-  gap: 4rem;
-}
-
-.navbar-menus ul {
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar-menus ul li a {
-  color: black;
-}
-
-.navbar-mobile-open,
-.navbar-mobile-close {
-  display: none;
-}
 
 .home {
   background: url(./images/main_big.png) no-repeat;
