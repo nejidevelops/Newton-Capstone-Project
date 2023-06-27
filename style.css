@@ -158,6 +158,72 @@ header {
     font-size: 1rem;
     font-weight: 400;
   }
+
+  .main-programs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-primary);
+    height: auto;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .main-programs h2 {
+    padding-top: 1rem;
+    color: var(--color-alternate);
+    position: relative;
+  }
+
+  .main-programs h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 30%;
+    height: 1px;
+    background: var(--color-secondary);
+    bottom: -25%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+  }
+
+  .program-cards {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .program-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    border: 1px solid white;
+    padding: 0.5rem;
+  }
+
+  .program-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .program-card .logo-title h4 {
+    color: var(--color-secondary);
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+
+  .program-card .logo-description p {
+    color: var(--color-alternate);
+    font-weight: 600;
+  }
+
+  .main-programs a {
+    cursor: pointer;
+    padding: 2rem;
+    font-weight: 900;
+    background-color: #ec5242;
+    color: var(--color-alternate);
+  }
 }
 
 @media (min-width: 768px) {
