@@ -139,6 +139,24 @@ header {
     border: 3px solid white;
     margin: 1rem 0;
   }
+
+  .home .date-time {
+    display: grid;
+    gap: 0.5rem;
+    margin: 2rem 0;
+  }
+
+  .home .date-time h3 {
+    color: var(--color-primary);
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+
+  .home .date-time p {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 400;
+  }
 }
 /* 
 header {
