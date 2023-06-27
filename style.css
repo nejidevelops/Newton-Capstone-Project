@@ -429,4 +429,33 @@ header {
   .home .home-details {
     padding: 1.5rem;
   }
+
+  .program-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .program-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    padding: 0.5rem;
+    margin-right: 0;
+    flex-direction: column;
+    text-align: center;
+    width: 220px;
+    height: auto;
+  }
+
+  .program-card .logo-title h4 {
+    color: var(--color-secondary);
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+  
+  .program-card .logo-description p {
+    color: var(--color-alternate);
+    font-weight: 600;
+  }
 }
