@@ -225,7 +225,7 @@ header {
     color: var(--color-alternate);
   }
 
-  #speakers {
+  .speakers {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,13 +235,13 @@ header {
     background:var(--color-alternate);
   }
 
-  #speakers h2 {
+  .speakers h2 {
     padding-top: 1rem;
     color: var(--color-primary);
     position: relative;
   }
 
-  #speakers h2::after {
+  .speakers h2::after {
     content: '';
     position: absolute;
     bottom: -1rem;
@@ -457,5 +457,18 @@ header {
   .program-card .logo-description p {
     color: var(--color-alternate);
     font-weight: 600;
+  }
+
+  #speaker-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 }
