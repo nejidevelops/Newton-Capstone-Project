@@ -127,7 +127,7 @@ header {
   .home h1 {
     text-transform: uppercase;
     color: transparent;
-    font-weight: 900;
+     font-weight: 900;
     font-size: 2rem;
     background: url(./images/orange.jpeg) no-repeat;
     background-size: cover;
@@ -223,6 +223,129 @@ header {
     font-weight: 900;
     background-color: #ec5242;
     color: var(--color-alternate);
+  }
+
+  #speakers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    background:var(--color-alternate);
+  }
+
+  #speakers h2 {
+    padding-top: 1rem;
+    color: var(--color-primary);
+    position: relative;
+  }
+
+  #speakers h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 30%;
+    height: 1px;
+    background: var(--color-secondary);
+    bottom: -25%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+  }
+
+  .speaker-card {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-primary);
+    padding: 2rem 0;
+  }
+
+  .partners h2 {
+    position: relative;
+    padding-bottom: 1rem;
+    color: var(--color-alternate);
+  }
+
+  .partners h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 30%;
+    height: 1px;
+    background: var(--color-secondary);
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+  }
+
+  .partners .partner-logos {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .partners .partner-logos img {
+    width: 100px;
+    height: 100px;
+  }
+
+  footer {
+    background: var(--color-alternate);
+    padding: 2rem 0;
+  }
+
+  .main-footer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .main-footer h2 {
+    font-size: 2rem;
+  }
+
+  .company-contacts h4 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+  }
+
+  .company-contacts .contact {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .company-contacts .contact p, 
+  .company-contacts .contact a {
+    color: var(--color-primary);
+  }
+
+  .company-socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .company-socials a {
+    color: var(--color-primary);
+    font-size: 2rem;
   }
 }
 
