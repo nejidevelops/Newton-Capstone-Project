@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-const speakersCard = document.getElementById('speakers');
+const speakersCard = document.getElementById('speaker-cards');
   
 for (let i = 0; i < speakers.length; i += 1) {
   const speakerCard = document.createElement('div');
