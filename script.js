@@ -34,13 +34,13 @@ const speakers = [
     details: 'Devops Engineer',
     description: 'My specialities include learning new skills and programming languages, problem solving skills.',
   },
-  {
-    id: 5,
-    name: 'Ezra Njeru',
-    image: '',
-    details: 'Javascript Developer',
-    description: 'Ever determined ever focused',
-  },
+  // {
+  //   id: 5,
+  //   name: 'Ezra Njeru',
+  //   image: '',
+  //   details: 'Javascript Developer',
+  //   description: 'Ever determined ever focused',
+  // },
 ]
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -61,4 +61,27 @@ document.addEventListener('DOMContentLoaded', function() {
   navbarMobileClose.addEventListener('click', function() {
     toggleNavbarMenus();
   });
+
+
+const speakersCard = document.getElementById('speakers');
+  
+for (let i = 0; i < speakers.length; i += 1) {
+  const speakerCard = document.createElement('div');
+  speakerCard.classList.add('speaker-card');
+
+  speakerCard.innerHTML = `
+      <div class="speaker-card">
+        <div class="speaker-image">
+          <img src="${speakers[i].image}" alt='Speaker Image'>
+        </div>
+        <div class="speaker-details">
+          <h3>${speakers[i].name}</h3>
+          <span>${speakers[i].details}</span>
+          <p>${speakers[i].description}</p>
+        </div>
+      </div>
+  `;
+
+  speakersCard.appendChild(speakerCard);
+}
 });
