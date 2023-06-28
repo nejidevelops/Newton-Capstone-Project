@@ -384,7 +384,7 @@ header {
     padding: 1rem 12rem;
   }
   
-  .navbar-logo label {
+  .navbar-logo label a {
     color: var(--color-primary);
     text-transform: uppercase;
     font-weight: 900;
