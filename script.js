@@ -41,9 +41,9 @@ const speakers = [
   //   details: 'Javascript Developer',
   //   description: 'Ever determined ever focused',
   // },
-]
+];
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const navbarMenus = document.querySelector('.navbar-menus');
   const navbarMobileOpen = document.querySelector('.navbar-mobile-open');
   const navbarMobileClose = document.querySelector('.navbar-mobile-close');
@@ -54,22 +54,21 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarMobileClose.classList.toggle('hidden');
   }
 
-  navbarMobileOpen.addEventListener('click', function() {
+  navbarMobileOpen.addEventListener('click', () => {
     toggleNavbarMenus();
   });
 
-  navbarMobileClose.addEventListener('click', function() {
+  navbarMobileClose.addEventListener('click', () => {
     toggleNavbarMenus();
   });
 
+  const speakersCard = document.getElementById('speaker-cards');
 
-const speakersCard = document.getElementById('speaker-cards');
-  
-for (let i = 0; i < speakers.length; i += 1) {
-  const speakerCard = document.createElement('div');
-  speakerCard.classList.add('speaker-card');
+  for (let i = 0; i < speakers.length; i += 1) {
+    const speakerCard = document.createElement('div');
+    speakerCard.classList.add('speaker-card');
 
-  speakerCard.innerHTML = `
+    speakerCard.innerHTML = `
       <div class="speaker-card">
         <div class="speaker-image">
           <img src="${speakers[i].image}" alt='Speaker Image'>
@@ -82,6 +81,6 @@ for (let i = 0; i < speakers.length; i += 1) {
       </div>
   `;
 
-  speakersCard.appendChild(speakerCard);
-}
+    speakersCard.appendChild(speakerCard);
+  }
 });
