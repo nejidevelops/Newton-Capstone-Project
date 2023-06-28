@@ -41,7 +41,7 @@ const speakers = [
     details: 'Javascript Developer',
     description: 'Ever determined ever focused',
   },
-]
+];
 
 document.addEventListener('DOMContentLoaded', () => {
   const navbarMenus = document.querySelector('.navbar-menus');
