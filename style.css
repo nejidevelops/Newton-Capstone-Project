@@ -62,6 +62,29 @@ button:focus {
     place-content: center;
   }
 
+  .main-programs a {
+    cursor: pointer;
+    padding: 2rem;
+    font-weight: 900;
+    background-color: #ec5242;
+    color: var(--color-alternate);
+  }
+
+  .company-socials a {
+    color: var(--color-primary);
+    font-size: 2rem;
+  }
+
+  .main-programs a:hover {
+    color: var(--color-secondary);
+    background-color: transparent;
+  }
+
+  .company-contacts .contact p,
+  .company-contacts .contact a {
+    color: var(--color-primary);
+  }
+
   .navbar-menus.show li a {
     font-weight: 600;
     font-size: 32px;
@@ -71,7 +94,7 @@ button:focus {
     justify-content: center;
     color: var(--color-alternate);
   }
-  
+
   .navbar-menus.show li,
   .navbar-menus button {
     animation: 1s slideIn ease-in-out alternate;
@@ -86,18 +109,18 @@ button:focus {
       transform: translateX(0);
     }
   }
-  
+
   .navbar-mobile-close {
     display: none;
   }
-  
+
   .navbar-mobile-close.hidden {
     display: block;
     position: absolute;
     top: 1rem;
     left: 1rem;
   }
-  
+
   .navbar-mobile-open.hidden {
     display: none;
   }
@@ -146,6 +169,12 @@ button:focus {
     margin: 1rem 0;
   }
 
+  .speaker-details h3 {
+    color: var(--color-primary);
+    font-weight: 900;
+    font-size: 1.25rem;
+  }
+
   .home .date-time {
     display: grid;
     gap: 0.5rem;
@@ -183,8 +212,6 @@ button:focus {
   .main-programs h2::after {
     content: '';
     position: absolute;
-    bottom: -1rem;
-    left: 0;
     width: 30%;
     height: 1px;
     background: var(--color-secondary);
@@ -211,6 +238,11 @@ button:focus {
     height: 40px;
   }
 
+  .company-contacts h4 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+  }
+
   .program-card .logo-title h4 {
     color: var(--color-secondary);
     font-weight: 800;
@@ -222,19 +254,6 @@ button:focus {
     font-weight: 600;
   }
 
-  .main-programs a {
-    cursor: pointer;
-    padding: 2rem;
-    font-weight: 900;
-    background-color: #ec5242;
-    color: var(--color-alternate);
-  }
-
-  .main-programs a:hover {
-    color: var(--color-secondary);
-    background-color: transparent;
-  }
-
   .speakers {
     display: flex;
     flex-direction: column;
@@ -242,7 +261,7 @@ button:focus {
     align-items: center;
     gap: 2rem;
     padding: 2rem 0;
-    background:var(--color-alternate);
+    background: var(--color-alternate);
   }
 
   #speaker-cards {
@@ -260,8 +279,6 @@ button:focus {
   .speakers h2::after {
     content: '';
     position: absolute;
-    bottom: -1rem;
-    left: 0;
     width: 30%;
     height: 1px;
     background: var(--color-secondary);
@@ -285,12 +302,6 @@ button:focus {
   .speaker-details {
     display: grid;
     gap: 0.5rem;
-  }
-
-  .speaker-details h3 {
-    color: var(--color-primary);
-    font-weight: 900;
-    font-size: 1.25rem;
   }
 
   .speaker-details span {
@@ -317,8 +328,6 @@ button:focus {
   .partners h2::after {
     content: '';
     position: absolute;
-    bottom: -1rem;
-    left: 0;
     width: 30%;
     height: 1px;
     background: var(--color-secondary);
@@ -358,20 +367,10 @@ button:focus {
     font-size: 2rem;
   }
 
-  .company-contacts h4 {
-    color: var(--color-primary);
-    font-size: 1.5rem;
-  }
-
   .company-contacts .contact {
     display: grid;
     gap: 0.5rem;
     margin-top: 0.5rem;
-  }
-
-  .company-contacts .contact p, 
-  .company-contacts .contact a {
-    color: var(--color-primary);
   }
 
   .company-socials {
@@ -380,11 +379,6 @@ button:focus {
     margin-top: 2rem;
     justify-content: center;
     align-items: center;
-  }
-
-  .company-socials a {
-    color: var(--color-primary);
-    font-size: 2rem;
   }
 }
 
@@ -405,50 +399,50 @@ button:focus {
     justify-content: flex-end;
     padding: 1rem 12rem;
   }
-  
+
   .nav-socials img {
     width: 20px;
     height: 20px;
     object-fit: cover;
   }
-  
+
   .nav-socials a {
     color: var(--color-alternate);
   }
-  
+
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 12rem;
   }
-  
+
   .navbar-logo label a {
     color: var(--color-primary);
     text-transform: uppercase;
     font-weight: 900;
   }
 
+  .navbar-menus ul li a {
+    color: black;
+    position: relative;
+  }
+
   .navbar-logo label a:hover {
     color: var(--color-secondary);
   }
-  
+
   .navbar-menus {
     display: flex;
     align-items: baseline;
     gap: 4rem;
   }
- 
+
   .navbar-menus ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-  }
-
-  .navbar-menus ul li a {
-    color: black;
-    position: relative;
   }
 
   .navbar-menus li a::before {
@@ -472,13 +466,13 @@ button:focus {
       /* top: 0; */
       width: 20%;
     }
+
     to {
       /* top: 1.25rem; */
       width: 100%;
     }
   }
 
-  
   .navbar-mobile-open,
   .navbar-mobile-close {
     display: none;
@@ -507,7 +501,7 @@ button:focus {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  
+
   .program-card {
     display: flex;
     align-items: center;
@@ -525,7 +519,7 @@ button:focus {
     font-weight: 800;
     font-size: 1.25rem;
   }
-  
+
   .program-card .logo-description p {
     color: var(--color-alternate);
     font-weight: 600;
