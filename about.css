@@ -10,13 +10,13 @@
     background-size: cover;
     padding: 0 2rem;
   }
-  
+
   .about-home h2 {
     color: var(--color-secondary);
     font-size: 1.25rem;
     font-weight: 400;
   }
-  
+
   .about-home h1 {
     text-transform: uppercase;
     color: transparent;
@@ -52,8 +52,6 @@
   .about-story h2::after {
     content: '';
     position: absolute;
-    bottom: -1rem;
-    left: 0;
     width: 30%;
     height: 1px;
     background: var(--color-secondary);
@@ -78,14 +76,11 @@
     gap: 2rem;
   }
 
-  .about-story h2 {
-    color: var(--color-primary);
-    position: relative;
-  }
-
   .about-events .event-images {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
   }
 
@@ -100,7 +95,7 @@
     background: var(--color-secondary);
     width: 350px;
     height: 200px;
-    opacity: .8;
+    opacity: 0.8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,7 +115,7 @@
     background: var(--color-secondary);
     width: 350px;
     height: 200px;
-    opacity: .8;
+    opacity: 0.8;
     display: flex;
     align-items: center;
     justify-content: center;
