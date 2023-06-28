@@ -29,6 +29,11 @@ header {
   position: relative;
 }
 
+button:hover,
+button:focus {
+  outline: none;
+}
+
 @media (min-width: 375px) {
   .nav-socials,
   .navbar-logo,
@@ -225,6 +230,11 @@ header {
     color: var(--color-alternate);
   }
 
+  .main-programs a:hover {
+    color: var(--color-secondary);
+    background-color: transparent;
+  }
+
   .speakers {
     display: flex;
     flex-direction: column;
@@ -258,6 +268,29 @@ header {
     display: flex;
     gap: 1rem;
     padding: 0 1rem;
+  }
+
+  .speaker-card .speaker-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .speaker-details {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .speaker-details h3 {
+    color: var(--color-primary);
+    font-weight: 900;
+    font-size: 1.25rem;
+  }
+
+  .speaker-details span {
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 1rem;
   }
 
   .partners {
@@ -389,6 +422,10 @@ header {
     text-transform: uppercase;
     font-weight: 900;
   }
+
+  .navbar-logo label a:hover {
+    color: var(--color-secondary);
+  }
   
   .navbar-menus {
     display: flex;
@@ -405,7 +442,36 @@ header {
 
   .navbar-menus ul li a {
     color: black;
+    position: relative;
   }
+
+  .navbar-menus li a::before {
+    position: absolute;
+    content: '';
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: 0.25rem;
+    top: 1.25rem;
+    right: 0;
+    display: none;
+  }
+
+  .navbar-menus li a:hover::before {
+    display: block;
+    animation: 1s navSlide ease-in alternate;
+  }
+
+  @keyframes navSlide {
+    from {
+      /* top: 0; */
+      width: 20%;
+    }
+    to {
+      /* top: 1.25rem; */
+      width: 100%;
+    }
+  }
+
   
   .navbar-mobile-open,
   .navbar-mobile-close {
