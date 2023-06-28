@@ -52,11 +52,11 @@ This is my portfolio project and it is based on this [design template](https://w
 - **Interacting with the DOM**
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
+[Devspark Website](https://newtonombese.github.io/Newton-Capstone-Project/)
 
 
 ## 🎥 Video Walkthrough <a name="video-walkthrough"></a>
-
+[Devspark Walkthrough](https://www.loom.com/share/9d1410d0e79443ad9db59f1d688ea7e5?sid=955e9c15-ec79-4dd6-9406-9ea5f7960230)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
