@@ -66,6 +66,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const seeMoreButton = document.querySelector('.see-more-cards');
   const seeLessButton = document.querySelector('.see-less-cards');
 
+  // Function to show all cards and hide the buttons
+  function showAllCards() {
+    const hiddenCards = document.querySelectorAll('.hidden-cards');
+    hiddenCards.forEach((card) => {
+      card.style.display = 'block';
+    });
+    seeMoreButton.style.display = 'none';
+    seeLessButton.style.display = 'none';
+  }
+
+  // Function to show the appropriate buttons based on screen size
+  function handleButtonVisibility() {
+    if (window.innerWidth <= 768) {
+      seeMoreButton.style.display = 'block';
+      seeLessButton.style.display = 'none';
+    } else {
+      seeMoreButton.style.display = 'none';
+      seeLessButton.style.display = 'none';
+      showAllCards();
+    }
+  }
+
+  // Initial button visibility check
+  handleButtonVisibility();
+
+  // Event listener for window resize
+  window.addEventListener('resize', handleButtonVisibility);
+
   for (let i = 0; i < speakers.length; i += 1) {
     const speakerCard = document.createElement('div');
     speakerCard.classList.add('speaker-card');
@@ -91,22 +119,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   seeMoreButton.addEventListener('click', () => {
-    seeLessButton.style.display = 'block';
-    seeMoreButton.style.display = 'none';
-
     const hiddenCards = document.querySelectorAll('.hidden-cards');
     hiddenCards.forEach((card) => {
       card.style.display = 'block';
     });
+    seeMoreButton.style.display = 'none';
+    seeLessButton.style.display = 'block';
   });
 
   seeLessButton.addEventListener('click', () => {
-    seeLessButton.style.display = 'none';
-    seeMoreButton.style.display = 'block';
-
     const hiddenCards = document.querySelectorAll('.hidden-cards');
     hiddenCards.forEach((card) => {
       card.style.display = 'none';
     });
+    seeMoreButton.style.display = 'block';
+    seeLessButton.style.display = 'none';
   });
 });
