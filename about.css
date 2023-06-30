@@ -8,30 +8,72 @@
     text-align: center;
     background: url(./images/mobile_intro_bg.png) no-repeat;
     background-size: cover;
-    padding: 0 2rem;
   }
 
-  .about-home h2 {
-    color: var(--color-secondary);
-    font-size: 1.25rem;
-    font-weight: 400;
+  .about-home-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
   }
 
   .about-home h1 {
     text-transform: uppercase;
-    color: transparent;
+    color: #f9432f;
     font-weight: 900;
-    font-size: 3rem;
-    background: url(./images/orange.jpeg) no-repeat;
-    background-size: cover;
-    -webkit-background-clip: text;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 60%;
+    position: relative;
+    margin-bottom: 35px;
+  }
+
+  .about-home h1::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    background: var(--color-secondary);
+    bottom: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .about-home .about-home-details {
-    background: #f7f7f7;
-    padding: 1.5rem 0;
-    border: 3px solid white;
-    margin: 1rem 0;
+    display: none;
+  }
+
+  .mobile-about-details {
+    display: block;
+    background: #fff;
+    width: 100%;
+    padding: 20px 12px;
+  }
+
+  .date-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #7a7a7a;
+    text-align: center;
+    width: 80%;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+
+  .date-time a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #5f5f5f;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 25px;
+    letter-spacing: 0.24px;
+    text-decoration-line: underline;
   }
 
   .about-story {
@@ -45,14 +87,18 @@
   }
 
   .about-story h2 {
-    color: var(--color-primary);
+    color: #2c2c2c;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.9px;
     position: relative;
   }
 
   .about-story h2::after {
     content: '';
     position: absolute;
-    width: 30%;
+    width: 10%;
     height: 1px;
     background: var(--color-secondary);
     bottom: -25%;
@@ -60,10 +106,30 @@
     transform: translate(-50%, -50%);
   }
 
+  .about-story p {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #838383;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.48px;
+  }
+
   .about-story img {
-    width: 350px;
-    height: 200px;
+    width: 375px;
+    height: 192px;
     object-fit: cover;
+  }
+
+  .line {
+    margin: 65px 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: #f5f5f6;
   }
 
   .about-events {
@@ -74,6 +140,26 @@
     padding: 2rem;
     text-align: center;
     gap: 2rem;
+  }
+
+  .about-events h2 {
+    color: #2c2c2c;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.9px;
+    position: relative;
+  }
+
+  .about-events h2::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 1px;
+    background: var(--color-secondary);
+    bottom: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .about-events .event-images {
@@ -133,18 +219,71 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    gap: 35px;
+  }
+
+  .about-home-text {
+    width: 80%;
+  }
+
+  .about-home-text h1 {
+    font-size: 3rem;
   }
 
   .about-home .about-home-details {
-    background: #f7f7f7;
-    padding: 1.5rem 0;
-    border: 3px solid white;
-    margin: 1rem 12rem;
+    background: #fff;
+    padding: 35px 65px;
+    flex-direction: column;
+    display: block;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mobile-about-details {
+    display: none;
   }
 
   .about-home .date-time {
-    margin-top: 5rem;
     display: grid;
     gap: 1rem;
+  }
+
+  .about-story img {
+    width: 542px;
+    height: 192px;
+    object-fit: cover;
+  }
+
+  .about-home .date-time h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #7a7a7a;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.48px;
+  }
+
+  .about-home .date-time p a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #5f5f5f;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 25px;
+    letter-spacing: 0.34px;
+    text-decoration-line: underline;
   }
 }
