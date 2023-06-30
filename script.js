@@ -4,7 +4,7 @@ const speakers = [
     name: 'Zamzam Hassan',
     image: './images/Zamzam.png',
     details: 'React and Frontend Developer',
-    description: 'I have a keen eye for detail and a passion for creating exceptional user experiences, and I\'m committed to delivering high-quality work that exceeds expectations.',
+    description: 'I have a keen eye for detail and a passion for creating exceptional user experiences, and I\'m committed to delivering high-quality work.',
   },
   {
     id: 1,
@@ -18,7 +18,7 @@ const speakers = [
     name: 'Leroy Ombiji',
     image: './images/Leroy.jpeg',
     details: 'Vue Developer',
-    description: 'I want to do more, be more, see more, learn more, and know more. I believe my own imagination is the bottleneck for the great things I can achieve!',
+    description: 'I want to do more, be more, see more, learn more, and know more. I believe my own imagination is the bottleneck for the great things!',
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const speakers = [
     name: 'Ezra Njeru',
     image: './images/Ezra.png',
     details: 'Javascript Developer',
-    description: 'Ever determined ever focused',
+    description: 'My specialities include learning new skills and programming languages, problem solving skills.',
   },
 ];
 
@@ -63,10 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const speakersCard = document.getElementById('speaker-cards');
+  const seeMoreButton = document.querySelector('.see-more-cards');
+  const seeLessButton = document.querySelector('.see-less-cards');
 
   for (let i = 0; i < speakers.length; i += 1) {
     const speakerCard = document.createElement('div');
     speakerCard.classList.add('speaker-card');
+
+    if (i >= 2) {
+      speakerCard.classList.add('hidden-cards');
+    }
 
     speakerCard.innerHTML = `
       <div class="speaker-card">
@@ -79,8 +85,28 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>${speakers[i].description}</p>
         </div>
       </div>
-  `;
+    `;
 
     speakersCard.appendChild(speakerCard);
   }
+
+  seeMoreButton.addEventListener('click', () => {
+    seeLessButton.style.display = 'block';
+    seeMoreButton.style.display = 'none';
+
+    const hiddenCards = document.querySelectorAll('.hidden-cards');
+    hiddenCards.forEach((card) => {
+      card.style.display = 'block';
+    });
+  });
+
+  seeLessButton.addEventListener('click', () => {
+    seeLessButton.style.display = 'none';
+    seeMoreButton.style.display = 'block';
+
+    const hiddenCards = document.querySelectorAll('.hidden-cards');
+    hiddenCards.forEach((card) => {
+      card.style.display = 'none';
+    });
+  });
 });
