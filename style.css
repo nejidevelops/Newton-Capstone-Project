@@ -709,4 +709,8 @@ button:focus {
   .see-less-cards {
     display: none;
   }
+
+  .hidden-cards {
+    display: block;
+  }
 }
